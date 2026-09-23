@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        StudentLinkedList studentList = new StudentLinkedList();
         int choice;
 
         do {
@@ -32,11 +33,49 @@ public class Main {
                 sc.next();
             }
             choice = sc.nextInt();
+            sc.nextLine(); // clear buffer
 
             switch (choice) {
-                case 1: System.out.println("Add Student - coming soon"); break;
-                case 16: System.out.println("Exiting..."); break;
-                default: System.out.println("Feature not implemented yet.");
+                case 1: {
+                    System.out.print("Enter Student ID: ");
+                    int id = sc.nextInt();
+                    sc.nextLine();
+                    System.out.print("Enter Name: ");
+                    String name = sc.nextLine();
+                    System.out.print("Enter Programme: ");
+                    String programme = sc.nextLine();
+                    System.out.print("Enter Marks: ");
+                    double marks = sc.nextDouble();
+                    studentList.addStudent(new Student(id, name, programme, marks));
+                    break;
+                }
+                case 2: {
+                    System.out.print("Enter Student ID to update: ");
+                    int id = sc.nextInt();
+                    sc.nextLine();
+                    System.out.print("Enter new Name: ");
+                    String name = sc.nextLine();
+                    System.out.print("Enter new Programme: ");
+                    String programme = sc.nextLine();
+                    System.out.print("Enter new Marks: ");
+                    double marks = sc.nextDouble();
+                    studentList.updateStudent(id, name, programme, marks);
+                    break;
+                }
+                case 3: {
+                    System.out.print("Enter Student ID to delete: ");
+                    int id = sc.nextInt();
+                    studentList.deleteStudent(id);
+                    break;
+                }
+                case 4:
+                    studentList.displayAll();
+                    break;
+                case 16:
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Feature not implemented yet.");
             }
 
         } while (choice != 16);
