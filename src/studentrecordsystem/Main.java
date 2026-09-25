@@ -7,6 +7,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         StudentLinkedList studentList = new StudentLinkedList();
         int choice;
+        ServiceQueue serviceQueue = new ServiceQueue();
+        ActionStack actionStack = new ActionStack();
 
         do {
             System.out.println("\n===== University Student Record & Campus Route System =====");
@@ -71,6 +73,21 @@ public class Main {
                 case 4:
                     studentList.displayAll();
                     break;
+                case 5: {
+                    System.out.print("Enter service request description: ");
+                    String request = sc.nextLine();
+                    serviceQueue.addRequest(request);
+                    actionStack.pushAction("Added service request: " + request);
+                    break;
+                }
+                case 6: {
+                    serviceQueue.processRequest();
+                    break;
+                }
+                case 7: {
+                    actionStack.displayActions();
+                    break;
+                }
                 case 16:
                     System.out.println("Exiting...");
                     break;
