@@ -48,7 +48,12 @@ public class Main {
                     String programme = sc.nextLine();
                     System.out.print("Enter Marks: ");
                     double marks = sc.nextDouble();
-                    studentList.addStudent(new Student(id, name, programme, marks));
+
+                    if (marks < 0 || marks > 100) {
+                        System.out.println("Error: Marks must be between 0 and 100. Student not added.");
+                    } else {
+                        studentList.addStudent(new Student(id, name, programme, marks));
+                    }
                     break;
                 }
                 case 2: {
@@ -61,7 +66,12 @@ public class Main {
                     String programme = sc.nextLine();
                     System.out.print("Enter new Marks: ");
                     double marks = sc.nextDouble();
-                    studentList.updateStudent(id, name, programme, marks);
+
+                    if (marks < 0 || marks > 100) {
+                        System.out.println("Error: Marks must be between 0 and 100. Update cancelled.");
+                    } else {
+                        studentList.updateStudent(id, name, programme, marks);
+                    }
                     break;
                 }
                 case 3: {
