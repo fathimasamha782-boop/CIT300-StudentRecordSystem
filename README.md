@@ -16,8 +16,11 @@
 ## Individual Contributions
 
 - **AF Samha:** Implemented Student class, StudentLinkedList (Add, Update, Delete, Search, Display), added marks validation (0-100 range), integrated with Main menu, project setup and GitHub repository management.
+  
 - **MTF Nusha:** Implemented ActionStack (recent actions/undo history) and ServiceQueue (service request management), integrated with Main menu (options 5-7).
-- **MIF Shadha:** _(to be updated)_
+  
+- **MIF Shadha:** Implemented StudentBST for Binary Search Tree insertion and in-order display, implemented StudentHashMap using Java HashMap for student ID-based searching, integrated BST and hashing functionality into Main.java (options 8 and 9), tested the functionality, and managed the feature branch, commit, push, and pull request merge.
+  
 - **ARF Simra:** _(to be updated)_
 
 ## System Overview
