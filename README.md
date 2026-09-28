@@ -16,9 +16,13 @@
 ## Individual Contributions
 
 - **AF Samha:** Implemented Student class, StudentLinkedList (Add, Update, Delete, Search, Display), added marks validation (0-100 range), integrated with Main menu, project setup and GitHub repository management.
-- **MTF Nusha:** - Implemented ActionStack to maintain recent actions and support undo history. Developed ServiceQueue to manage service requests using the queue data structure. Integrated stack and queue functionalities with the Main menu (options 5-7).
-- **MIF Shadha:** _(to be updated)_
-- **ARF Simra:** - Implemented the Graph functionality to represent campus locations and their connections. Developed operations to add campus locations and establish connections between them. Implemented Breadth-First Search (BFS) and Depth-First Search (DFS) algorithms for graph traversal. Integrated graph functionality with the Main menu, tested the graph operations, and contributed to the integration of the graph component into the overall system.
+  
+- **MTF Nusha:** Implemented ActionStack (recent actions/undo history) and ServiceQueue (service request management), integrated with Main menu (options 5-7).
+  
+- **MIF Shadha:** Implemented StudentBST for Binary Search Tree insertion and in-order display, implemented StudentHashMap using Java HashMap for student ID-based searching, integrated BST and hashing functionality into Main.java (options 8 and 9), tested the functionality, and managed the feature branch, commit, push, and pull request merge.
+  
+- **ARF Simra:**Implemented the Graph functionality to represent campus locations and their connections. Developed operations to add campus locations and establish connections between them. Implemented Breadth-First Search (BFS) and Depth-First Search (DFS) algorithms for graph traversal. Integrated graph functionality with the Main menu, tested the graph operations, and contributed to the integration of the graph component into the overall system.
+
 
 ## System Overview
 Java console application that manages university student records and represents connections between campus locations using linked lists, stacks, queues, trees, hashing, and graphs.
