@@ -1,4 +1,4 @@
-package studentrecordsystem;
+package ;
 
 import java.util.Scanner;
 

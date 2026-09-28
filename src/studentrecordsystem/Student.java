@@ -1,4 +1,4 @@
-package studentrecordsystem;
+package ;
 
 public class Student {
     private int studentId;
