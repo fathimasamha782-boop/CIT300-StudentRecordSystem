@@ -1,4 +1,4 @@
-package ;
+package studentrecordsystem ;
 
 import java.util.Stack;
 
