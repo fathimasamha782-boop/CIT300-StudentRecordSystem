@@ -1,4 +1,4 @@
-package studentrecordsystem ;
+package studentrecordsystem;
 
 import java.util.Scanner;
 
@@ -11,6 +11,8 @@ public class Main {
         StudentLinkedList studentList = new StudentLinkedList();
         ServiceQueue serviceQueue = new ServiceQueue();
         ActionStack actionStack = new ActionStack();
+        StudentBST studentBST = new StudentBST();
+        StudentHashMap studentHash = new StudentHashMap();
 
         // Campus Graph object
         CampusGraph campusGraph = new CampusGraph();
@@ -76,8 +78,10 @@ public class Main {
 
                     } else {
 
-                        studentList.addStudent(
-                                new Student(id, name, programme, marks));
+                        Student newStudent = new Student(id, name, programme, marks);
+                        studentList.addStudent(newStudent);
+                        studentBST.insert(newStudent);
+                        studentHash.addStudent(newStudent);
                     }
 
                     break;
@@ -123,6 +127,7 @@ public class Main {
                     sc.nextLine();
 
                     studentList.deleteStudent(id);
+                    studentHash.removeStudent(id);
 
                     break;
                 }
@@ -174,8 +179,7 @@ public class Main {
 
                 case 8:
 
-                    System.out.println(
-                            "BST/AVL feature not implemented yet.");
+                    studentBST.displayInOrder();
 
                     break;
 
@@ -183,12 +187,22 @@ public class Main {
                 // HASHING
                 // =========================
 
-                case 9:
+                case 9: {
 
-                    System.out.println(
-                            "Hashing feature not implemented yet.");
+                    System.out.print("Enter Student ID to search: ");
+                    int searchId = sc.nextInt();
+                    sc.nextLine();
+
+                    Student found = studentHash.searchStudent(searchId);
+
+                    if (found != null) {
+                        System.out.println("Found: " + found);
+                    } else {
+                        System.out.println("Student not found.");
+                    }
 
                     break;
+                }
 
                 // =========================
                 // GRAPH
